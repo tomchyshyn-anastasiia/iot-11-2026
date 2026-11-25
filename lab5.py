@@ -60,9 +60,9 @@ class Wardrobe:
     def sort_by_size(self):
         self.clothes.sort(key=lambda c: SIZES.index(c.get_size()))
 
-    def are_go_out(self, clothes):
+   def are_go_out(self):
         types = []
-        for c in clothes:
+        for c in self.clothes:
             if c.type not in types:
                 types.append(c.type)
         count = len(types)
@@ -89,7 +89,7 @@ def main():
     wardrobe.are_go_out(wardrobe.clothes)
 
     wardrobe.add(shoes)
-    wardrobe.are_go_out(wardrobe.clothes)
+    wardrobe.are_go_out()
 
     print(shirt)
 
